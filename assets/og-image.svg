@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Inter,Segoe UI,Arial,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="0.55" stop-color="#12235a"/>
+      <stop offset="1" stop-color="#3b1670"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="72" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(200 120) scale(520)">
+      <stop offset="0" stop-color="#2563eb" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(90 90)">
+    <rect width="72" height="72" rx="18" fill="url(#mark)"/>
+    <path d="M22 50V22h6l10 14V22h6v28h-6L28 36v14z" fill="#fff"/>
+    <circle cx="52" cy="24" r="5" fill="#93c5fd"/>
+    <text x="92" y="50" fill="#fff" font-size="34" font-weight="800" letter-spacing="-1">ExpressNet<tspan fill="#93c5fd">AI</tspan></text>
+  </g>
+  <text x="90" y="300" fill="#fff" font-size="72" font-weight="900" letter-spacing="-3">Enterprise AI for</text>
+  <text x="90" y="384" fill="#fff" font-size="72" font-weight="900" letter-spacing="-3">document-heavy work.</text>
+  <text x="90" y="452" fill="#dbeafe" font-size="30" font-weight="500">Legal · Contracts · Immigration · Evidence · Compliance</text>
+  <g transform="translate(90 512)" fill="#93c5fd" font-size="24" font-weight="700">
+    <text>AI + RAG + Citations</text>
+    <text x="330">Enterprise Ready</text>
+    <text x="600">By ExpressNet Inc.</text>
+  </g>
+</svg>

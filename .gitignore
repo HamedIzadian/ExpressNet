@@ -1,0 +1,8 @@
+# Local tooling / preview
+.claude/
+.vercel/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+*.log
