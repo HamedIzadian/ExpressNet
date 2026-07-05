@@ -1,5 +1,5 @@
 /* =========================================================
-   ExpressNet AI — Site interactions
+   ExpressNet AI, Site interactions
    ========================================================= */
 document.addEventListener("DOMContentLoaded", () => {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -138,6 +138,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* ---- Industry flip cards: tap / keyboard toggle ---- */
+  document.querySelectorAll(".flip-card").forEach(fc => {
+    fc.addEventListener("click", () => fc.classList.toggle("flipped"));
+    fc.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        fc.classList.toggle("flipped");
+      }
+    });
+  });
+
   /* ---- Contact form (demo handler) ---- */
   const form = document.querySelector("#contactForm");
   if (form) {
@@ -147,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const name = (form.querySelector("#name")?.value || "there").trim();
       if (status) {
         status.textContent =
-          `Thank you, ${name}. Your request has been received — the ExpressNet team will be in touch shortly.`;
+          `Thank you, ${name}. Your request has been received, the ExpressNet team will be in touch shortly.`;
         status.classList.add("ok");
       }
       form.reset();
