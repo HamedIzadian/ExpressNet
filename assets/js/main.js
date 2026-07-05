@@ -7,13 +7,22 @@ document.addEventListener("DOMContentLoaded", () => {
     el.textContent = new Date().getFullYear();
   });
 
-  /* ---- Sticky nav shadow on scroll ---- */
+  /* ---- Scroll progress bar ---- */
+  const progress = document.createElement("div");
+  progress.className = "scroll-progress";
+  document.body.appendChild(progress);
+
+  /* ---- Sticky nav shadow + scroll progress ---- */
   const nav = document.querySelector(".nav");
-  if (nav) {
-    const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
+  const onScroll = () => {
+    if (nav) nav.classList.toggle("scrolled", window.scrollY > 8);
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    progress.style.width = max > 0 ? (h.scrollTop / max) * 100 + "%" : "0%";
+  };
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
 
   /* ---- Mobile menu toggle ---- */
   const toggle = document.querySelector(".nav-toggle");
